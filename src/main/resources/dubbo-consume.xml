@@ -12,5 +12,7 @@
     <!-- 注册中心暴露服务地址 -->
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
 
-    <dubbo:reference id="gouldService" interface="com.ykly.service.GouldService" />
+    <dubbo:reference id="gouldService" interface="com.ykly.service.GouldService" group="test" version="1.0.0"/>
+
+    <dubbo:reference id="gouldService2" interface="com.ykly.service.GouldService" group="test2" version="1.0.0"/>
 </beans>
