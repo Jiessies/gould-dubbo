@@ -3,9 +3,6 @@ package com.ykly.entity;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * Created by hongwei on 2016/11/23.
- */
 public enum ERetCode {
     
     CHECKOUT_FAILURE(1,"入参校验失败"),
@@ -71,7 +68,34 @@ public enum ERetCode {
     OVER_DIRECTION_RANGE(20803, "起点终点距离过长"),
     //出现3开头的错误码，建议先检查传入参数是否正确，若无法解决，请详细描述错误复现信息，提工单给我们。
     //如，30001、30002、30003、32000、32001、32002、32003、32200、32201、32202、32203。
-    ENGINE_RESPONSE_DATA_ERROR(300, "服务响应失败");
+    ENGINE_RESPONSE_DATA_ERROR(300, "服务响应失败"),
+    
+    
+    SUCC(0, "SUCC"),
+    
+    /* 14 - 网络错误 */
+    READ_TIME_OUT(1401, "获取数据超时 -_-"),
+    CONNECTION_TIME_OUT(1402, "连接超时 -_-"),
+    
+    /* 2开头 — 环境错误 */
+    ENV_ERROR(2000, "环境错误 >_<"),
+    
+    /* 21 - Redis相关错误 */
+    ENV_ERROR_REDIS(2100, "Redis错误 -_-"),
+    ENV_ERROR_REDIS_CONNECT(2101, "Redis连接失败 -_-"),
+    
+    /* 22 Mysql相关错误 */
+    ENV_ERROR_MYSQL(2200, "MySql错误 +_+"),
+    
+    /* 3开头 - 输入错误*/
+    INPUT_ERROR(3000, "入参错误 o_O???"),
+    
+    /* 4开头 - 数据相关错误*/
+    CINEMA_NOTEXIST(4001, "影院不存在 -_-#"),
+    
+    /* 9999 - 为定义错误 */
+    UNKNOWN(9999, "未知错误 Q_Q");
+    
     
     private final int value;
     private final String msg;
