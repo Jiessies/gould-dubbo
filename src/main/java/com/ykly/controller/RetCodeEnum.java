@@ -3,9 +3,6 @@ package com.ykly.controller;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- * Created by hongwei on 2016/11/23.
- */
 public enum RetCodeEnum {
 
     SUCC(0, "SUCC"),

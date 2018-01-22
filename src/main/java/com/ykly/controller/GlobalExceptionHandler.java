@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.validation.ConstraintViolationException;
 
-/**
- * Created by hongwei on 2016/12/1.
- */
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {

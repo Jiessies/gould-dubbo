@@ -5,9 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
-/**
- * Created by hongwei on 16/8/22.
- */
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
