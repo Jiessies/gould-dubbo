@@ -5,11 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 
+import java.io.Serializable;
+
 @Data
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ResMsg<T> {
-    
+public class ResMsg<T> implements Serializable{
+    private static final long serialVersionUID = 1L;
     private final static String SUCC_MSG = "succ";
     private final static String SUCC_CODE = "0";
     

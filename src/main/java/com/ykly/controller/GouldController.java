@@ -39,7 +39,7 @@ public class GouldController {
     @Qualifier(value = "gouldService2")
     private GouldService gouldService2;
     
-    @RequestMapping(value = "/get/{name}", method = RequestMethod.GET)
+    @RequestMapping(value = "/get/{name}")
     public ResMsg getString(@RequestHeader(value = "X-Request-Id", required = false, defaultValue = "") String requestId,
                             @PathVariable String name,
                             @RequestParam(value = "userId", required = true) String userId,
