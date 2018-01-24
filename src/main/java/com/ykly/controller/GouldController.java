@@ -99,4 +99,5 @@ public class GouldController {
     public ResMsg getDistanceMeasurement(@Valid DistanceMeasurement distanceMeasurement, BindingResult bindingResult) {
         return testService.getDistanceMeasurement(distanceMeasurement, bindingResult);
     }
+    
 }
